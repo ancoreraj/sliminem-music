@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --theme-color: #e90303;
+}
+
+body {
+    /* background-color: #fff; */
+    background-color: #fff;
+    font-family: 'Manrope', sans-serif;
+}
+.header{
+    
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_content{
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 20px;
+}
+.header_content a{
+    text-decoration: none;
+    color: black;
+}
+
+.header_content a:hover{
+    color: var(--theme-color);
+}
+
+.body{
+    background-color: #f8fafc;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+}
+.hr{
+    width: 100%;
+    height: 4px;
+    background-color: var(--theme-color);
+}
+.title{
+    width: 40%;
+    margin: 60px 0;
+}
+
+.title_text{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+.title_title{
+    text-align: center;
+    font-size: 18px;
+}
+
+.title_title span{
+    margin: 0 5px;
+}
+.title_text span{
+    color: var(--theme-color);
+}
+.title_description{
+    color: #52525b;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin: 40px 0 10px 0;
+}
+
+.title_buttons{
+    margin: 30px 0;
+    text-align: center;
+}
+.title_buttons a{
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    color: white;
+    
+    background-color: var(--theme-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.title_icons{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+.title_icons a{
+    margin: 5px 10px;
+}
+
+#linkedin{
+color: #007bb6;
+}
+#instagram{
+color: #E1306C;
+}
+#facebook{
+color: #3b5998;
+}
+#twitter{
+color: #00aced;
+}
+#youtube{
+    color: #e90303;
+}
+
+.video_list_header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+}
+.beats_title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #52525b;
+}
+.beats_hr{
+    width: 78%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fa4f4f;
+}
+
+.videoss{
+    margin-top: 55px;
+    padding: 0 15px;
+}
+
+.video{
+    margin: 50px 10px;
+    box-shadow: 0px 0px 10px 4px #d4c4c4;
+    
+}
+
+.youtube-video{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    
+}
+.youtube-video iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border-bottom: none;
+}
+
+.video_description{
+    display: flex;
+    padding: 5px 5px;
+    /* background: linear-gradient(92.55deg, var(--theme-color) 30.65%, #7E8CE0 100%); */
+
+    background-color: rgb(206, 61, 61);
+    justify-content: space-between;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.video_title{
+    
+
+}
+.video_links{
+    display: flex;
+    justify-content: space-around;
+}
+.video_price{
+    margin: 0 8px 0 0;
+
+}
+.video_buy{
+    font-weight: 600;
+    margin-left: 15px;
+}
+.video_buy a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.contact__form{
+    /* margin-top: 10px; */
+    background: linear-gradient(92.55deg, var(--theme-color) 30.65%, #7E8CE0 100%);
+
+    box-shadow: 0px 0px 10px 2px #c2c2c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+
+}
+.form{
+    margin-top: 10px;
+    width: 40%;
+    margin: auto;
+}
+.form h2{
+    color: white;
+
+}
+.submit_btn{
+    display: flex;
+    justify-content: center;
+
+}
+.form button{
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--theme-color);
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: none;
+    /* box-shadow: 0px 0px 10px 2px #7c84b3; */
+    margin: auto;
+}
+
+footer{
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+footer a{
+    color: var(--theme-color);
+    text-decoration: none;
+}
+footer a:hover{
+    color: var(--theme-color);
+}

@@ -2,11 +2,12 @@ const express = require('express');
 const flash = require('connect-flash');
 const session = require('express-session');
 const dotenv = require('dotenv')
+const path = require('path')
 
 const app = express();
 
 app.set('view engine', 'ejs');
-
+app.use(express.static(path.join(__dirname, 'public')))
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
 

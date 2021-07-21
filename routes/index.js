@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Welcome Page
 router.get('/', (req, res) =>{
-    res.render('beats')
+    res.render('home')
 });
 
  

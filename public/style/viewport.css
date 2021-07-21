@@ -1,0 +1,39 @@
+@media only screen and (max-width:830px) {
+    .header_content{
+        font-size: 17px;
+        margin: 0 10px 0 10px;
+    }
+    .title{
+        width: 95%;
+        margin: 50px 0;
+    }
+    .title_text{
+        font-size: 36px;
+    }
+    .title_title{
+        font-size: 16px;
+    }
+    .title_description{
+        font-size: 15px;
+    }
+    .title_buttons a{
+        font-size: 15px;
+    }
+    .beats_title{
+        font-size: 17px;
+    }
+    .beats_hr{
+        width: 70%;
+    }
+    .videoss{
+        padding: 0 5px;
+    }
+    .video_list_header{
+        margin-top: 50px;
+    }
+    .form{
+        width: 80%;
+    }
+
+
+}
