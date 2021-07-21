@@ -3,8 +3,10 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const dotenv = require('dotenv')
 const path = require('path')
+const serviceAccountKey = require('./serviceAccountKey')
 
 const app = express();
+dotenv.config({ path: './config.env' })
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')))
@@ -22,8 +24,16 @@ app.use(
 // Connect flash
 app.use(flash());
 
+
+const admin = require("firebase-admin");
+const serviceAccount = serviceAccountKey;
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
+
 // Global variables
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');

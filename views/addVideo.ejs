@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <form method="POST" action="/addVideo" class="container mt-5">
+        <h4 class="mb-4">Sliminem Music video input</h4>
+        <select name="category" class="form-select mb-3" aria-label="Default select example">
+            <option selected>Beats</option>
+            <option value="1">Music</option>
+        </select>
+        <div class="mb-3">
+            <input name="title" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                autocomplete="off" placeholder="Title" required>
+        </div>
+        <div class="mb-3">
+            <input name="url" type="text" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Youtube Embedded Url" required>
+        </div>
+        <div class="mb-3">
+            <input name="price" type="number" class="form-control" id="exampleInputPassword1" autocomplete="off"
+                placeholder="Price in Rupees" required>
+        </div>
+        <div class="mb-3">
+            <input name="buyLink" type="text" class="form-control" id="exampleInputPassword1" autocomplete="off"
+                placeholder="Buy Link" required>
+        </div>
+        
+        <div class="submit_btn">
+            <button class="btn btn-danger mx-auto">Submit</button>
+
+
+        </div>
+    </form>
+
+</body>
+
+</html>
