@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const moment = require('moment')
-
+const secret = process.env.SECRET
 const uuid = require('uuid');
 const admin = require("firebase-admin");
 const db = admin.firestore();
@@ -36,12 +36,11 @@ router.get('/sliminem/:category', async (req, res) => {
     res.render('home', { videos, category })
 });
 
-
-router.get('/addVideo', (req, res) => {
-    res.render('addVideo')
+router.get(`/addVideo${secret}`, (req, res) => {
+    res.render('addVideo', {secret})
 })
 
-router.post('/addVideo', async (req, res) => {
+router.post(`/addVideo${secret}`, async (req, res) => {
     const { category, title, url, price, buyLink } = req.body;
     const date = moment().format('MMMM Do YYYY, h:mm:ss a');
 
