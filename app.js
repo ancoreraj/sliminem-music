@@ -3,7 +3,6 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const dotenv = require('dotenv')
 const path = require('path')
-const serviceAccountKey = require('./serviceAccountKey')
 
 const app = express();
 dotenv.config({ path: './config.env' })
@@ -26,11 +25,10 @@ app.use(flash());
 
 
 const admin = require("firebase-admin");
-const serviceAccount = serviceAccountKey;
+const serviceAccountKey = require('./serviceAccountKey')
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(serviceAccountKey)
 });
-
 
 // Global variables
 app.use(function (req, res, next) {

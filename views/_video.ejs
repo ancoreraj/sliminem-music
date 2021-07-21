@@ -1,15 +1,15 @@
 <div data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1200" class="video">
     <div class="youtube-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ts9obX8O6AU" title="YouTube video player"
+        <iframe width="560" height="315" src="<%=video.url%>" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
     </div>
     <div class="video_description">
-        <div class="video_title">Sim Costa</div>
+        <div class="video_title"><%=video.title%></div>
         <div class="video_links">
-            <div class="video_price">$ 2.50</div>
-            <div class="video_buy"><a href="#">
+            <div class="video_price">Rs. <%=video.price%></div>
+            <div class="video_buy"><a href="<%=video.buyLink%>">
                     Buy
                 </a></div>
 

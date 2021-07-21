@@ -24,17 +24,20 @@
 
         </div>
         <div class="header_content">
-            <a href="/beats">Beats</a>
+            <a href="/sliminem/Beats">Beats</a>
         </div>
         <div class="header_content">
-            <a href="/music">Music</a>
+            <a href="/sliminem/Music">Music</a>
 
         </div>
         <div class="hr"></div>
 
     </div>
+    <%- include('messages'); -%>
 
     <div class="body">
+        
+        
 
         <div class="title">
             <div class="title_text">Sliminem <span>Music.</span></div>
@@ -88,17 +91,14 @@
 
             <div class="video_list">
                 <div class="video_list_header">
-                    <div class="beats_title">My <%=beats%></div>
+                    <div class="beats_title">My <%=category%></div>
                     <div class="beats_hr"></div>
                 </div>
 
                 <div class="videoss">
-                    <%- include('_video'); -%>
-                    <%- include('_video'); -%>
-                    <%- include('_video'); -%>
-                    <%- include('_video'); -%>
-                    <%- include('_video'); -%>
-                    <%- include('_video'); -%>
+                    <%videos.forEach((video)=>{%>
+                        <%- include('_video', {video}); -%>
+                    <%})%>
                 </div>
             </div>
         </div>
@@ -118,23 +118,23 @@
             </svg>
             Reach out to Sliminem Music
           </h2>
-          <form>
+          <form action="/contact" method="POST">
             <div class="mb-3">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                autocomplete="off" placeholder="Name">
+              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                autocomplete="off" placeholder="Name" required>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Email">
+              <input type="email" name="email" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Email">
             </div>
             <div class="mb-3">
-              <input type="number" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Contact No">
+              <input type="number" name="contactNo" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Contact No" required>
             </div>
             <div class="mb-3">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 100px"></textarea>
+              <textarea class="form-control" name="message" placeholder="Type your message here" id="floatingTextarea2"
+                style="height: 100px" required></textarea>
             </div>
             <div class="submit_btn">
-              <button class="mx-auto">Submit</button>
+              <button type="submit" class="mx-auto">Submit</button>
     
     
             </div>
@@ -151,6 +151,8 @@
 
 
 </body>
+
+
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
